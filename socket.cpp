@@ -30,7 +30,7 @@ void* client(void* args){
         cout << "client-WSAStartup failed!" << endl;
         return 0;
     }else{
-        cout<<"client_WSAStartup success!"<<endl;
+        cout<<"client_WSAStartup success!\n"<<endl;
     }
 
     /*
@@ -48,7 +48,7 @@ void* client(void* args){
         WSACleanup();//释放套接字资源;
         return 0;
     }else{
-        cout<<"client socket success!"<<endl;
+        cout<<"client socket success!\n"<<endl;
     }
 
 //服务器套接字地址
@@ -72,7 +72,7 @@ void* client(void* args){
         WSACleanup(); //释放套接字资源
         return 0;
     }else{
-        cout<<"client connect success!"<<endl;
+        cout<<"client connect success!\n"<<endl;
     }
     //三次握手完成
 
@@ -92,7 +92,7 @@ void* client(void* args){
     // 第三个参数，接收数据的长度，
     // 第四个参数，一些传送参数的设置
     */
-    cout << "*************************客户端**********************"<< endl;
+    cout << "客户端启动成功"<< endl;
     while(true)
     {
         memset(sendBuf, '/0', xBUF_SIZE);
@@ -203,7 +203,7 @@ void* server(void *args){
         WSACleanup();           //释放套接字资源;
         return 0;
     }else{
-        cout<<"listen success!"<<endl;
+        cout<<"listen success!\n"<<endl;
     }
 
     /*
@@ -226,7 +226,7 @@ void* server(void *args){
         WSACleanup();           //释放套接字资源;
        return 0;
     }else{
-        cout<<"accept success!"<<endl;
+        cout<<"accept success!\n"<<endl;
     }
 
     //三次握手完成
@@ -247,7 +247,7 @@ void* server(void *args){
     // 第三个参数，接收数据的长度，
     // 第四个参数，一些传送参数的设置
     */
-    cout << "*************************服务器**********************"<< endl;
+    cout << "服务器启动成功\n"<< endl;
     while(true)
     {
         memset(recBuf, '/0', xBUF_SIZE);
